@@ -164,7 +164,7 @@ export async function fetch(url: string, options?: RequestInit): Promise<Respons
         }).catch(e => console.error("Error in event listener promise chain:", e)),
       )
       .then((u: Function) => (unlisten = u))
-      .catch(e => {
+      .catch((e: any) => { // Explicitly type the error parameter
           console.error("Failed to setup stream-response listener:", e);
           close(); // Close if listener setup fails
       });
