@@ -114,7 +114,7 @@ export async function fetch(url: string, options?: RequestInit): Promise<Respons
   if (window.__TAURI__) {
     const {
       signal,
-      method = "GET", // Keep default GET, but expect caller to override for POST
+      method = "POST", // Keep default GET, but expect caller to override for POST
       headers: _headers = {},
       body: originalBody = null, // Accept null/undefined body
     } = options || {};
