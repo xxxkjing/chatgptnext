@@ -1,0 +1,77 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "SearXNG Search API",
+    "description": "A search engine. Useful for answering questions about current events. Input should be a search query.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://searxng.qunqin.org"
+    }
+  ],
+  "paths": {
+    "/search": {
+      "post": {
+        "operationId": "SearXNGSearch",
+        "description": "A search engine. Useful for answering questions about current events. Input should be a search query.",
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "description": "Keywords for the query.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "s",
+            "in": "query",
+            "description": "Optional pagination parameter, can be `0`.",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "o",
+            "in": "query",
+            "description": "Response format, can be `json`.",
+            "schema": {
+              "type": "string",
+              "default": "json"
+            }
+          },
+          {
+            "name": "api",
+            "in": "query",
+            "description": "Optional parameter for API type, can be `d.js`.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "kl",
+            "in": "query",
+            "description": "Locale settings (e.g., `wt-wt`, `us-en`, etc.). Defaults to `wt-wt`.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bing_market",
+            "in": "query",
+            "description": "Market settings for Bing search, e.g., `us-en`, `uk-en`, etc.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
