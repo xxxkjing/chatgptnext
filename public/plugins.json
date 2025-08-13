@@ -3,15 +3,5 @@
     "id": "search",
     "name": "Search",
     "schema": "https://raw.githubusercontent.com/xxxkjing/chatgptnext/main/public/search.json"
-  },
-  {
-    "id": "arxivsearch",
-    "name": "ArxivSearch",
-    "schema": "https://raw.githubusercontent.com/xxxkjing/chatgptnext/main/public/arxivsearch.json"
-  },
-  {
-    "id": "duckduckgolite",
-    "name": "DuckDuckGoLiteSearch",
-    "schema": "https://raw.githubusercontent.com/xxxkjing/chatgptnext/main/public/ddg.json"
   }
 ]
