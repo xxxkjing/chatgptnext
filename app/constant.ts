@@ -493,6 +493,7 @@ export const VISION_MODEL_REGEXES = [
   /o3/,
   /o4-mini/,
   /grok-4/i,
+  /gpt-5/
 ];
 
 export const EXCLUDE_VISION_MODEL_REGEXES = [/claude-3-5-haiku-20241022/];
@@ -500,68 +501,35 @@ export const EXCLUDE_VISION_MODEL_REGEXES = [/claude-3-5-haiku-20241022/];
 const openaiModels = [
   // As of July 2024, gpt-4o-mini should be used in place of gpt-3.5-turbo,
   // as it is cheaper, more capable, multimodal, and just as fast. gpt-3.5-turbo is still available for use in the API.
-  "gpt-4o-mini-2024-07-18",
+  "o3",
+  "gpt-4o",
+  "gpt-4o-search-preview",
   "gpt-5-2025-08-07",
-  "gpt-oss-120b",
-  "o4-mini",
+  "gpt-5-chat-latest",
+  "o4-mini-deep-research-2025-06-26"
 ];
 
 const googleModels = [
-  "models/gemini-2.5-flash-preview-05-20",
-  "models/gemini-2.5-pro",
+  "gemini-2.5-flash",
+  "gemini-2.5-flash-search",
+  "gemini-2.5-pro",
+  "gemini-2.5-pro-search"
 ];
 
-const alibabaModes = [
-  "Qwen3-235B-A22B-Instruct-2507-FP8",
-  "qwen3-235b-a22b-thinking-2507",
-  "Qwen/Qwen3-Coder-480B-A35B-Instruct",
-  "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
-  "Qwen/Qwen3-Coder-480B-A35B-Instruct-Turbo",
+const anthropicModels = [
+  "anthropic/claude-opus-4",
+  "claude-sonnet-4-20250514"
 ];
 
 const moonshotModels = [
-  "moonshot-v1-auto",
-  "moonshot-v1-8k",
-  "moonshot-v1-32k",
-  "moonshot-v1-128k",
-  "moonshot-v1-8k-vision-preview",
-  "moonshot-v1-32k-vision-preview",
-  "moonshot-v1-128k-vision-preview",
-  "kimi-thinking-preview",
-  "kimi-k2-0711-preview",
-  "kimi-latest",
+  "kimi-k2-pro",
+  "moonshotai/Kimi-K2-Instruct",
 ];
 
-const deepseekModels = ["deepseek-chat", "deepseek-coder", "deepseek-reasoner"];
-
-const xAIModes = [
-  "grok-beta",
-  "grok-2",
-  "grok-2-1212",
-  "grok-2-latest",
-  "grok-vision-beta",
-  "grok-2-vision-1212",
-  "grok-2-vision",
-  "grok-2-vision-latest",
-  "grok-3-mini-fast-beta",
-  "grok-3-mini-fast",
-  "grok-3-mini-fast-latest",
-  "grok-3-mini-beta",
-  "grok-3-mini",
-  "grok-3-mini-latest",
-  "grok-3-fast-beta",
-  "grok-3-fast",
-  "grok-3-fast-latest",
-  "grok-3-beta",
-  "grok-3",
-  "grok-3-latest",
-];
+const deepseekModels = ["deepseek-chat", "deepseek-reasoner"];
 
 const chatglmModels = [
-  "zai-org/GLM-4.5",
-  "zai-org/GLM-4.5-Air",
-  "zai-org/GLM-4.5-FP8",
-  "zai-org/GLM-4.5-Air-FP8",
+  "glm-4.5",
 ];
 
 let seq = 1000; // 内置的模型序号生成器从1000开始
@@ -577,17 +545,6 @@ export const DEFAULT_MODELS = [
       sorted: 1, // 这里是固定的，确保顺序与之前内置的版本一致
     },
   })),
-  ...openaiModels.map((name) => ({
-    name,
-    available: true,
-    sorted: seq++,
-    provider: {
-      id: "azure",
-      providerName: "Azure",
-      providerType: "azure",
-      sorted: 2,
-    },
-  })),
   ...googleModels.map((name) => ({
     name,
     available: true,
@@ -599,17 +556,6 @@ export const DEFAULT_MODELS = [
       sorted: 3,
     },
   })),
-  ...alibabaModes.map((name) => ({
-    name,
-    available: true,
-    sorted: seq++,
-    provider: {
-      id: "alibaba",
-      providerName: "Alibaba",
-      providerType: "alibaba",
-      sorted: 7,
-    },
-  })),
   ...moonshotModels.map((name) => ({
     name,
     available: true,
@@ -619,17 +565,6 @@ export const DEFAULT_MODELS = [
       providerName: "Moonshot",
       providerType: "moonshot",
       sorted: 9,
-    },
-  })),
-  ...xAIModes.map((name) => ({
-    name,
-    available: true,
-    sorted: seq++,
-    provider: {
-      id: "xai",
-      providerName: "XAI",
-      providerType: "xai",
-      sorted: 11,
     },
   })),
   ...chatglmModels.map((name) => ({
