@@ -506,29 +506,31 @@ const openaiModels = [
   "gpt-4o-search-preview",
   "gpt-5-2025-08-07",
   "gpt-5-chat-latest",
-  "o4-mini-deep-research-2025-06-26"
-];
+  "o4-mini-deep-research-2025-06-26",
+// ];
 
-const googleModels = [
+// const googleModels = [
   "gemini-2.5-flash",
   "gemini-2.5-flash-search",
   "gemini-2.5-pro",
-  "gemini-2.5-pro-search"
-];
+  "gemini-2.5-pro-search",
+// ];
 
-const anthropicModels = [
-  "anthropic/claude-opus-4",
-  "claude-sonnet-4-20250514"
-];
+// const anthropicModels = [
+  // "anthropic/claude-opus-4",
+  // "claude-sonnet-4-20250514",
+// ];
 
-const moonshotModels = [
+// const moonshotModels = [
   "kimi-k2-pro",
   "moonshotai/Kimi-K2-Instruct",
-];
+// ];
 
-const deepseekModels = ["deepseek-chat", "deepseek-reasoner"];
+// const deepseekModels = [
+  "deepseek-chat", "deepseek-reasoner",
+// ];
 
-const chatglmModels = [
+// const chatglmModels = [
   "glm-4.5",
 ];
 
@@ -540,55 +542,56 @@ export const DEFAULT_MODELS = [
     sorted: seq++, // Global sequence sort(index)
     provider: {
       id: "openai",
-      providerName: "OpenAI",
+      providerName: "AI",
       providerType: "openai",
       sorted: 1, // 这里是固定的，确保顺序与之前内置的版本一致
     },
   })),
-  ...googleModels.map((name) => ({
-    name,
-    available: true,
-    sorted: seq++,
-    provider: {
-      id: "google",
-      providerName: "Google",
-      providerType: "openai",
-      sorted: 3,
-    },
-  })),
-  ...moonshotModels.map((name) => ({
-    name,
-    available: true,
-    sorted: seq++,
-    provider: {
-      id: "moonshot",
-      providerName: "Moonshot",
-      providerType: "openai",
-      sorted: 9,
-    },
-  })),
-  ...chatglmModels.map((name) => ({
-    name,
-    available: true,
-    sorted: seq++,
-    provider: {
-      id: "chatglm",
-      providerName: "ChatGLM",
-      providerType: "openai",
-      sorted: 12,
-    },
-  })),
-  ...deepseekModels.map((name) => ({
-    name,
-    available: true,
-    sorted: seq++,
-    provider: {
-      id: "deepseek",
-      providerName: "DeepSeek",
-      providerType: "openai",
-      sorted: 13,
-    },
-  })),
+  // ...googleModels.map((name) => ({
+  //   name,
+  //   available: true,
+  //   sorted: seq++,
+  //   provider: {
+  //     id: "google",
+  //     providerName: "Google",
+  //     providerType: "google",
+  //     sorted: 3,
+  //   },
+  // })),
+  // ...moonshotModels.map((name) => ({
+  //   name,
+  //   available: true,
+  //   sorted: seq++,
+  //   provider: {
+  //     id: "moonshot",
+  //     providerName: "Moonshot",
+  //     providerType: "moonshot",
+  //     sorted: 9,
+  //   },
+  // })),
+  // ...chatglmModels.map((name) => ({
+  //   name,
+  //   available: true,
+  //   sorted: seq++,
+  //   provider: {
+  //     id: "chatglm",
+  //     providerName: "ChatGLM",
+  //     providerType: "chatglm",
+  //     sorted: 12,
+  //   },
+  // })),
+  // ...deepseekModels.map((name) => ({
+  //   name,
+  //   available: true,
+  //   sorted: seq++,
+  //   provider: {
+  //     id: "deepseek",
+  //     providerName: "DeepSeek",
+  //     providerType: "deepseek",
+  //     sorted: 13,
+  //   },
+  // })),
+
 ] as const;
 
 export const CHAT_PAGE_SIZE = 15;
