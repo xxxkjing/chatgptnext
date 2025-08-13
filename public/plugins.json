@@ -1,6 +1,6 @@
 [
   {
-    "id": "Search",
+    "id": "search",
     "name": "Search",
     "schema": "https://raw.githubusercontent.com/xxxkjing/chatgptnext/main/public/search.json"
   },

@@ -552,7 +552,7 @@ export const DEFAULT_MODELS = [
     provider: {
       id: "google",
       providerName: "Google",
-      providerType: "google",
+      providerType: "openai",
       sorted: 3,
     },
   })),
@@ -563,7 +563,7 @@ export const DEFAULT_MODELS = [
     provider: {
       id: "moonshot",
       providerName: "Moonshot",
-      providerType: "moonshot",
+      providerType: "openai",
       sorted: 9,
     },
   })),
@@ -574,7 +574,7 @@ export const DEFAULT_MODELS = [
     provider: {
       id: "chatglm",
       providerName: "ChatGLM",
-      providerType: "chatglm",
+      providerType: "openai",
       sorted: 12,
     },
   })),
@@ -585,7 +585,7 @@ export const DEFAULT_MODELS = [
     provider: {
       id: "deepseek",
       providerName: "DeepSeek",
-      providerType: "deepseek",
+      providerType: "openai",
       sorted: 13,
     },
   })),
