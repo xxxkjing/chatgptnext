@@ -2,7 +2,7 @@
   {
     "id": "Search",
     "name": "Search",
-    "schema": "https://raw.github.com/chatgptnext/blob/main/public/search.json"
+    "schema": "https://raw.githubusercontent.com/xxxkjing/chatgptnext/main/public/search.json"
   },
   {
     "id": "arxivsearch",
