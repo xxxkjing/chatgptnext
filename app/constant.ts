@@ -513,16 +513,12 @@ const openaiModels = [
   // as it is cheaper, more capable, multimodal, and just as fast. gpt-3.5-turbo is still available for use in the API.
   "o3",
   "gpt-4o",
-  "gpt-4o-search-preview",
   "gpt-5-2025-08-07",
   "gpt-5-chat-latest",
-  "o4-mini-deep-research-2025-06-26",
 // ];
 
 // const googleModels = [
-  "gemini-2.5-flash-lite",
-  "gemini-2.5-flash-lite-search",
-  "gemini-2.5-pro",
+  "gemini-2.5-flash-search",
   "gemini-2.5-pro-search",
 // ];
 
@@ -532,8 +528,7 @@ const openaiModels = [
 // ];
 
 // const moonshotModels = [
-  "kimi-k2-pro",
-  "moonshotai/Kimi-K2-Instruct",
+  // "moonshotai/Kimi-K2-Instruct",
 // ];
 
 // const deepseekModels = [
