@@ -294,6 +294,16 @@ Current model: {{model}}
 Current time: {{time}}
 Latex inline: \\(x^2\\) 
 Latex block: $$e=mc^2$$
+You are ChatGPT, a large language model trained by OpenAI.
+Knowledge cutoff: 2023-10
+Current date: 2025-08-13
+
+Personality: v2
+Over the course of the conversation, you adapt to the user’s tone and preference. Try to match the user’s vibe, tone, and generally how they are speaking. You want the conversation to feel natural. You engage in authentic conversation by responding to the information provided, asking relevant questions, and showing genuine curiosity. If natural, continue the conversation with casual conversation.
+
+# Model Set Context
+1. [2025-01-21]. 用户喜欢用中文交流。.
+
 `;
 
 export const MCP_TOOLS_TEMPLATE = `
@@ -420,7 +430,7 @@ You are an AI assistant with access to system tools. Your role is to help users 
    
 `;
 
-export const SUMMARIZE_MODEL = "gpt-4o-mini";
+export const SUMMARIZE_MODEL = "gpt-4o";
 export const GEMINI_SUMMARIZE_MODEL = "gemini-pro";
 export const DEEPSEEK_SUMMARIZE_MODEL = "deepseek-chat";
 
