@@ -3,5 +3,30 @@
     "id": "search",
     "name": "Search",
     "schema": "https://raw.githubusercontent.com/xxxkjing/chatgptnext/main/public/search.json"
+  },
+  {
+    "id": "url",
+    "name": "Url",
+    "schema": "https://raw.githubusercontent.com/ChatGPTNextWeb/NextChat-Awesome-Plugins/refs/heads/main/plugins/jina-r/openapi.json"
+  },
+  {
+    "id": "codeinterpreter",
+    "name": "CodeInterpreter",
+    "schema": "https://raw.githubusercontent.com/ChatGPTNextWeb/NextChat-Awesome-Plugins/refs/heads/main/plugins/codeinterpreterapi/openapi.json"
+  },
+  {
+    "id": "pdf",
+    "name": "Pdf",
+    "schema": "https://raw.githubusercontent.com/ChatGPTNextWeb/NextChat-Awesome-Plugins/refs/heads/main/plugins/chatpdf/openapi.json"
+  },
+  {
+    "id": "arxivsearch",
+    "name": "arxivsearch",
+    "schema": "https://raw.githubusercontent.com/ChatGPTNextWeb/NextChat-Awesome-Plugins/refs/heads/main/plugins/arxivsearch/openapi.json"
+  },
+  {
+    "id": "ddg",
+    "name": "ddg",
+    "schema": "https://raw.githubusercontent.com/ChatGPTNextWeb/NextChat-Awesome-Plugins/refs/heads/main/plugins/duckduckgolite/openapi.json"
   }
 ]
