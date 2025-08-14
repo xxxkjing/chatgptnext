@@ -511,24 +511,29 @@ export const EXCLUDE_VISION_MODEL_REGEXES = [/claude-3-5-haiku-20241022/];
 const openaiModels = [
   // As of July 2024, gpt-4o-mini should be used in place of gpt-3.5-turbo,
   // as it is cheaper, more capable, multimodal, and just as fast. gpt-3.5-turbo is still available for use in the API.
-  "o3",
   "gpt-4o",
-  "gpt-5-2025-08-07",
+  "o3",
+  "gpt-4o-search-preview",
   "gpt-5-chat-latest",
+  "gpt-5-mini",
 // ];
 
 // const googleModels = [
+  "gemini-2.5-flash-lite",
   "gemini-2.5-flash-search",
   "gemini-2.5-pro-search",
 // ];
 
 // const anthropicModels = [
-  // "anthropic/claude-opus-4",
+  "anthropic/claude-opus-4",
   // "claude-sonnet-4-20250514",
 // ];
 
 // const moonshotModels = [
-  // "moonshotai/Kimi-K2-Instruct",
+  "kimi-k2-pro",
+  "moonshotai/Kimi-K2-Instruct",
+  "Pro/moonshotai/Kimi-K2-Instruct",
+  "Qwen/Qwen3-Coder-480B-A35B-Instruct",
 // ];
 
 // const deepseekModels = [
